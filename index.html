@@ -5,12 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="demo-styles.css">
-
-    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-  </head> 
+    <style>
+      .social-media-icons {
+        position: fixed;
+        bottom: 20px;
+        center: 20px;
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-media-icons img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
 <body>
   <div id="loader-container">
     <div class="loader"></div>
@@ -21,41 +33,33 @@
     ios-src="https://cdn.glitch.global/75a70984-3835-4273-8eac-d9cdf0776a9c/chair%20product%20lighting1.usdz?v=1725016330459"
     poster="https://cdn.glitch.global/75a70984-3835-4273-8eac-d9cdf0776a9c/IO%20LOGOArtboard%201%20w.png?v=1724836494021"
     alt="Leather chair"
-                  shadow-intensity="1"
-                  camera-controls
-                  auto-rotate 
-                  ar>
-    </model-viewer>
-    
-    <div class="example-2">
-      <ul>
-        <li class="icon-content">
-          <a href="https://www.linkedin.com/in/IsaacOsho" target="_blank" data-social="linkedin">
-            <svg> <!-- LinkedIn SVG icon here --> </svg>
-            <div class="filled"></div>
-          </a>
-          <div class="tooltip">LinkedIn</div>
-        </li>
-        <li class="icon-content">
-          <a href="http://www.instagram.com/caasiohso" target="_blank" data-social="instagram">
-            <svg> <!-- Instagram SVG icon here --> </svg>
-            <div class="filled"></div>
-          </a>
-          <div class="tooltip">Instagram</div>
-        </li>
-        <li class="icon-content">
-          <a href="https://github.com/IsaacOsho" target="_blank" data-social="github">
-            <svg> <!-- GitHub SVG icon here --> </svg>
-            <div class="filled"></div>
-          </a>
-          <div class="tooltip">GitHub</div>
-        </li>
-      </ul>
-    </div>
+    shadow-intensity="1"
+    camera-controls
+    auto-rotate ar>
+                        
+</model-viewer>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="social-media-icons">
+    <a href="http://www.instagram.com/caasiohso" target="_blank">
+      <img src="https://caasiohso.sirv.com/vecteezy_3d-render-camera-icon-isolated-on-transparent-background_22498176.png" >
+    </a>
+    <a href="https://github.com/IsaacOsho" target="_blank">
+      <img src="https://caasiohso.sirv.com/github.png" >
+    </a>
+    <a href="https://www.linkedin.com/in/isaac-osho-5282712a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      <img src="https://caasiohso.sirv.com/linkedin.png" >
+    </a>
+    <a href="https://t.me/+1AlLIcayt3U0OGNk" target="_blank">
+        <img src="https://caasiohso.sirv.com/email_3592200.png" >
+      </a>
+      <a href="https://whatsapp.com/dl/" target="_blank">
+        <img src="https://caasiohso.sirv.com/whatsapp_1384162.png" >
+      </a>
   </div>
   
-  <!-- 💁 Include both scripts below to support all browsers! -->
-  <!-- Loads <model-viewer> for modern browsers: -->
+  <!-- Scripts to load the model viewer -->
   <script type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
