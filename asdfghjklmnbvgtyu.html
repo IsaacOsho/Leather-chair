@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; example</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="demo-styles.css">
+
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head> 
+<body>
+  <div id="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <div id="card" style="display:none;">
+    <model-viewer src="https://cdn.glitch.global/75a70984-3835-4273-8eac-d9cdf0776a9c/chair%20product%20lighting1.glb?v=1725011616161"
+    ios-src="https://cdn.glitch.global/75a70984-3835-4273-8eac-d9cdf0776a9c/chair%20product%20lighting1.usdz?v=1725016330459"
+    poster="https://cdn.glitch.global/75a70984-3835-4273-8eac-d9cdf0776a9c/IO%20LOGOArtboard%201%20w.png?v=1724836494021"
+    alt="Leather chair"
+                  shadow-intensity="1"
+                  camera-controls
+                  auto-rotate 
+                  ar>
+    </model-viewer>
+    
+    <div class="example-2">
+      <ul>
+        <li class="icon-content">
+          <a href="https://www.linkedin.com/in/IsaacOsho" target="_blank" data-social="linkedin">
+            <svg> <!-- LinkedIn SVG icon here --> </svg>
+            <div class="filled"></div>
+          </a>
+          <div class="tooltip">LinkedIn</div>
+        </li>
+        <li class="icon-content">
+          <a href="http://www.instagram.com/caasiohso" target="_blank" data-social="instagram">
+            <svg> <!-- Instagram SVG icon here --> </svg>
+            <div class="filled"></div>
+          </a>
+          <div class="tooltip">Instagram</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://github.com/IsaacOsho" target="_blank" data-social="github">
+            <svg> <!-- GitHub SVG icon here --> </svg>
+            <div class="filled"></div>
+          </a>
+          <div class="tooltip">GitHub</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- 💁 Include both scripts below to support all browsers! -->
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <!-- JavaScript to handle the loading animation and display the model -->
+  <script>
+    window.addEventListener('load', function() {
+      const loaderContainer = document.getElementById('loader-container');
+      const modelViewer = document.getElementById('card');
+      
+      // Hide loader after some time and show model viewer
+      setTimeout(() => {
+        loaderContainer.style.display = 'none';
+        modelViewer.style.display = 'block';
+      }, 3000); // Adjust the timeout as needed
+    });
+  </script>
+</body>
+</html>
